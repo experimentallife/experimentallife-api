@@ -8,7 +8,7 @@ using Project.Common.Model;
 
 namespace Project.Controllers.Base;
 
-[JsonParamter]
+// [JsonParamter]
 public class BaseController : ControllerBase
 {
   private ContentResult JsonContent(string jsonStr)

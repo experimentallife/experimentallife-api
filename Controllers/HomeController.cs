@@ -29,13 +29,13 @@ public class HomeController : BaseApieNoAuthorizeController
     return httpResponseMessage;
   }
 
-  [HttpGet]
+  [HttpPost]
   [Route("contact")]
   public async Task<ActionResult<object>> Contact(
     [FromBody] UseEmailDto useEmailDto
   )
   {
-    await _emailService.SendAsync();
+    await _emailService.SendAsync(useEmailDto);
     return Success();
   }
 }
